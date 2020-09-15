@@ -1,0 +1,37 @@
+= How to use this Repository?
+
+. Create a Git repository for the new presentation
+. Clone this presentation repository
+. Change into to working directory of the new presentation
+. Add this assets repository as a submodule
++
+[source,bash]
+----
+git submodule add https://github.com/tkleiber/de.kleiber.asciidoc.assets.git src/main/asciidoc/assets
+----
+. Add child pom
++
+[source,xml]
+----
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
+	<modelVersion>4.0.0</modelVersion>
+
+    <groupId>my_groupId</groupId>
+    <artifactId>my_artifactId</artifactId>
+    <version>1.0-SNAPSHOT</version>
+    <name>my_name</name>
+    <description>my_description</description>
+
+    <parent>
+        <groupId>de.kleiber</groupId>
+        <artifactId>asciidoc.assets</artifactId>
+        <version>1.0-SNAPSHOT</version>
+        <relativePath>src/main/asciidoc/assets/pom.xml</relativePath>
+    </parent>
+
+</project>
+----
+
+
+
