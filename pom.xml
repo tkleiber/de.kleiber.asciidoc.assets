@@ -201,7 +201,7 @@
                 <revealjsdir>../reveal.js-${revealjs.version}</revealjsdir>
                 <src-incl>${project.basedir}/</src-incl>
                 <!-- revealjs_theme>blood</revealjs_theme-->
-                <revealjs_customtheme>assets/themes/css/reveal-tkleiber-dark-agile.css</revealjs_customtheme>
+                <revealjs_customtheme>assets/themes/css/reveal-tkleiber-dark.css</revealjs_customtheme>
                 <!-- none, fade, slide, convex, concave, zoom -->
                 <!-- dynamic : PRES-asciidoc.html?transition=convex -->
                 <revealjs_transition>convex</revealjs_transition>

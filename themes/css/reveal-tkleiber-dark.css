@@ -98,3 +98,10 @@ rose : 239/82/91
 .reveal section.bubbles {
   background-position: 45% -200% !important;
 }
+
+body {
+  background: no-repeat 98% 5% url('../favicon.png'),
+  linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
+  center url('../../../backgrounds/background_dark.jpg');
+  background-size: 3%, cover, cover;
+}

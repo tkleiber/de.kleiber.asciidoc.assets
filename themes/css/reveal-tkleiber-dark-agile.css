@@ -1,8 +1,0 @@
-@import "reveal-tkleiber-dark.css";
-
-body {
-  background: no-repeat 98% 5% url('../favicon.png'), 
-              linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), 
-              center url('../backgrounds/dark-agile.jpg');
-  background-size: 3%, cover, cover;
-}

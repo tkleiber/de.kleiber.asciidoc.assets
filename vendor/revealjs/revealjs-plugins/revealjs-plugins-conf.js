@@ -104,8 +104,6 @@ menu: {
 		</li></ul>` }
 	],
   	themes: [// Specifies the themes that will be available in the themes menu panel. Set to 'true' to show the themes menu panel with the default themes list. 
-		{ name: '########## light ##########', theme: 'assets/themes/css/reveal-tkleiber-light.css' },
-		{ name: 'tkleiber-light-agile', theme: 'assets/themes/css/reveal-tkleiber-light-agile.css' },
-		{ name: '########## dark ##########', theme: 'assets/themes/css/reveal-tkleiber-dark.css' },
-		{ name: 'tkleiber-dark-agile', theme: 'assets/themes/css/reveal-tkleiber-dark-agile.css' }]
+		{ name: 'light', theme: 'assets/themes/css/reveal-tkleiber-light.css' },
+		{ name: 'dark', theme: 'assets/themes/css/reveal-tkleiber-dark.css' }]
 }
