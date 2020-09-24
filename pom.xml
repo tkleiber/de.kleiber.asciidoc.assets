@@ -31,10 +31,10 @@
     <!-- Program Versions on GitHub -->
     <!-- Use 'master' as version and remove the 'v' prefixing the download url to use the current snapshot version  -->
     <!-- asciidoctor-revealjs.version 3.0.0 bricht das Code Highlighting im Reveal Output -->
-    <asciidoctor-revealjs.version>2.0.0</asciidoctor-revealjs.version>
+    <asciidoctor-revealjs.version>4.0.1</asciidoctor-revealjs.version>
     <!-- revealjs.version 3.8.0 bricht die korrekte Positionierung des Titels im Background -->
     <!-- -> für PDF Druck mit Decktape Container per Jenkins -->
-    <revealjs.version>3.7.0</revealjs.version>
+    <revealjs.version>3.9.2</revealjs.version>
   </properties>
 
   <dependencies />

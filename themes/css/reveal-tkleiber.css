@@ -963,8 +963,6 @@ text.c3-axis-y-label, text.c3-axis-y2-label {
   display: table;
   width: 100%;
   bottom: 0;
-
-  color: $color-primary-2;
 }
 
 .footer span {
