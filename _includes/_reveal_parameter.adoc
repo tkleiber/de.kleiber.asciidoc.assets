@@ -1,6 +1,7 @@
 :source-highlighter: highlightjs
 :backend: revealjs
 :revealjs_slideNumber: true
+:revealjs_hash: true
 :imagesdir: images
 :icons: font
 :toc-title: Agenda
