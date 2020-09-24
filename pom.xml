@@ -200,7 +200,6 @@
                 <source-highlighter>highlightjs</source-highlighter>
                 <revealjsdir>../reveal.js-${revealjs.version}</revealjsdir>
                 <src-incl>${project.basedir}/</src-incl>
-                <!-- revealjs_theme>blood</revealjs_theme-->
                 <revealjs_customtheme>assets/themes/css/reveal-tkleiber-dark.css</revealjs_customtheme>
                 <!-- none, fade, slide, convex, concave, zoom -->
                 <!-- dynamic : PRES-asciidoc.html?transition=convex -->
@@ -208,8 +207,6 @@
                 <revealjs_slideNumber>true</revealjs_slideNumber>
                 <!-- does not work T_T -->
                 <!-- <favicon>assets/themes/favicon.png</favicon> -->
-                <revealjs_width>1100</revealjs_width>
-                <revealjs_height>700</revealjs_height>
                 <revealjs_plugins>assets/vendor/revealjs/revealjs-plugins/revealjs-plugins.js</revealjs_plugins>
                 <revealjs_plugins_configuration>assets/vendor/revealjs/revealjs-plugins/revealjs-plugins-conf.js</revealjs_plugins_configuration>
                 <outfilesuffix>.html</outfilesuffix>
