@@ -4,4 +4,4 @@
 :revealjs_hash: true
 :imagesdir: images
 :icons: font
-:toc-title: Agenda
+:toc-title: Hey Brain! Was wollen wir denn heute abend machen?
