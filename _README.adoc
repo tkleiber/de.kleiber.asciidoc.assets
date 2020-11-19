@@ -3,11 +3,23 @@
 . Create a Git repository for the new presentation
 . Clone this presentation repository
 . Change into to working directory of the new presentation
-. Add this assets repository as a submodule
+. Add this assets repository as a submodule and pull it
 +
-[source,bash]
+[source,powershell]
 ----
 git submodule add https://github.com/tkleiber/de.kleiber.asciidoc.assets.git src/main/asciidoc/assets
+
+rem This creates detached head
+rem git submodule update --recursive --remote
+
+rem Detached state
+git stash
+git checkout master
+git stash show
+git stash apply
+
+// end::tagname[]
+
 ----
 . Add child pom
 +
