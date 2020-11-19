@@ -1,4 +1,7 @@
+// :source-highlighter: pygments, coderay, prettify and highlightjs
 :source-highlighter: highlightjs
+// Load additional languages to the common from https://highlightjs.org/download/
+:highlightjs-languages: asciidoc, dos, powershell
 :backend: revealjs
 :revealjs_slideNumber: true
 :revealjs_hash: true
