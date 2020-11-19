@@ -190,7 +190,7 @@ body {
 .reveal h2, .reveal h3, #toctitle {
   margin: 0px 0px 40px -20px;
   padding: 0 0 0px 20px;
-  text-align: left;
+  text-align: center;
   font-size: 40px;
 }
 
