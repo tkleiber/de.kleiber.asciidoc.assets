@@ -197,7 +197,7 @@
               <outputDirectory>${project.slides.directory}/reveal</outputDirectory>
               <templateDir>${project.build.directory}/asciidoctor-reveal.js-${asciidoctor-revealjs.version}/templates</templateDir>
               <attributes>
-                <source-highlighter>highlightjs</source-highlighter>
+                <!--source-highlighter>highlightjs</source-highlighter-->
                 <revealjsdir>../reveal.js-${revealjs.version}</revealjsdir>
                 <src-incl>${project.basedir}/</src-incl>
                 <revealjs_customtheme>assets/themes/css/reveal-tkleiber-dark.css</revealjs_customtheme>
