@@ -194,10 +194,11 @@
             </goals>
             <configuration>
               <backend>revealjs</backend>
+              <!-- // for revealjs: highlightjs (https://asciidoctor.org/docs/asciidoctor-revealjs/#syntax-highlighting) -->
+              <sourceHighlighter>highlight.js</sourceHighlighter>
               <outputDirectory>${project.slides.directory}/reveal</outputDirectory>
               <templateDir>${project.build.directory}/asciidoctor-reveal.js-${asciidoctor-revealjs.version}/templates</templateDir>
               <attributes>
-                <!--source-highlighter>highlightjs</source-highlighter-->
                 <revealjsdir>../reveal.js-${revealjs.version}</revealjsdir>
                 <src-incl>${project.basedir}/</src-incl>
                 <revealjs_customtheme>assets/themes/css/reveal-tkleiber-dark.css</revealjs_customtheme>
@@ -246,6 +247,8 @@
             </goals>
             <configuration>
               <backend>pdf</backend>
+              <!-- // for pdf: Rouge, Pygments, or CodeRay (https://asciidoctor.org/docs/asciidoctor-pdf/#install-a-syntax-highlighter-optional) -->
+              <!-- Pygments seems not to work at the moment -->
               <sourceHighlighter>rouge</sourceHighlighter>
               <attributes>
                 <imagesdir>${project.build.directory}/generated-docs/images</imagesdir>
