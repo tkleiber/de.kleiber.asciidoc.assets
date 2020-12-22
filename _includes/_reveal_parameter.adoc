@@ -4,7 +4,7 @@
 // as we generate revealjs, html5 and pdf we set the different highlighter in pom.xml
 // :source-highlighter: coderay
 // Load additional languages to the common from https://highlightjs.org/download/
-// :highlightjs-languages: asciidoc, dos, powershell, sql
+:highlightjs-languages: dos, powershell
 :revealjs_slideNumber: true
 :revealjs_hash: true
 :imagesdir: images
