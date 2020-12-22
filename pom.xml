@@ -23,7 +23,9 @@
     <asciidoctorj.diagram.version>2.0.5</asciidoctorj.diagram.version>
     <download.maven.plugin.version>1.6.0</download.maven.plugin.version>
     <asciidoctorj.version>2.4.1</asciidoctorj.version>
-    <jruby.version>9.2.13.0</jruby.version>
+    <!-- jruby.version 9.2.13.0 führt zu Fehler -->
+    <!-- Execution install-gems of goal de.saumya.mojo:gem-maven-plugin:1.1.8:initialize failed: Java returned: 1 -->
+    <jruby.version>9.2.9.0</jruby.version>
     <!-- revealjs.version 4.0.0 bricht die korrekte Anzeige meiner Templates -->
     <revealjs.version>3.9.2</revealjs.version>
     <!-- Use 'master' as version and remove the 'v' prefixing the download url to use the current snapshot version  -->
