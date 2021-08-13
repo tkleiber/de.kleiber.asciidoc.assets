@@ -18,11 +18,11 @@
     <maven.compiler.target>1.8</maven.compiler.target>
 
     <!-- Maven Plugin Versions -->
-    <asciidoctor.maven.plugin.version>2.1.0</asciidoctor.maven.plugin.version>
-    <asciidoctorj.pdf.version>1.5.3</asciidoctorj.pdf.version>
-    <asciidoctorj.diagram.version>2.0.5</asciidoctorj.diagram.version>
-    <download.maven.plugin.version>1.6.0</download.maven.plugin.version>
-    <asciidoctorj.version>2.4.1</asciidoctorj.version>
+    <asciidoctor.maven.plugin.version>2.2.1</asciidoctor.maven.plugin.version>
+    <asciidoctorj.pdf.version>1.6.0</asciidoctorj.pdf.version>
+    <asciidoctorj.diagram.version>2.1.2</asciidoctorj.diagram.version>
+    <download.maven.plugin.version>1.6.6</download.maven.plugin.version>
+    <asciidoctorj.version>2.5.2</asciidoctorj.version>
     <!-- jruby.version 9.2.13.0 führt zu Fehler -->
     <!-- Execution install-gems of goal de.saumya.mojo:gem-maven-plugin:1.1.8:initialize failed: Java returned: 1 -->
     <jruby.version>9.2.9.0</jruby.version>
@@ -36,7 +36,7 @@
     <dependency>
       <groupId>rubygems</groupId>
       <artifactId>asciidoctor-revealjs</artifactId>
-      <version>4.0.1</version>
+      <version>4.1.0</version>
       <type>gem</type>
       <!-- Avoid downloading gems included in AsciidoctorJ -->
       <exclusions>
@@ -66,6 +66,26 @@
       </extension>
     </extensions>
     <plugins>
+      <plugin>
+        <groupId>org.apache.maven.plugins</groupId>
+        <artifactId>maven-enforcer-plugin</artifactId>
+        <version>3.0.0</version>
+        <executions>
+          <execution>
+            <id>enforce-maven</id>
+            <goals>
+              <goal>enforce</goal>
+            </goals>
+            <configuration>
+              <rules>
+                <requireMavenVersion>
+                  <version>3.6.3</version>
+                </requireMavenVersion>
+              </rules>
+            </configuration>
+          </execution>
+        </executions>
+      </plugin>
       <plugin>
         <groupId>com.googlecode.maven-download-plugin</groupId>
         <artifactId>download-maven-plugin</artifactId>
