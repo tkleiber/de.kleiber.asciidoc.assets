@@ -1,3 +1,4 @@
+extends: default
 color:
     zenika:
         title: B11E3E #red

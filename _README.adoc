@@ -35,12 +35,18 @@ git stash apply
     <name>my_name</name>
     <description>my_description</description>
 
-    <parent>
+    <!--parent>
         <groupId>de.kleiber</groupId>
         <artifactId>asciidoc.assets</artifactId>
         <version>1.0-SNAPSHOT</version>
         <relativePath>src/main/asciidoc/assets/pom.xml</relativePath>
-    </parent>
+    </parent-->
+
+    <modules>
+        <module>src/main/asciidoc/assets/pom_pdf.xml</module>
+        <module>src/main/asciidoc/assets/pom_html.xml</module>
+        <module>src/main/asciidoc/assets/pom_revealjs.xml</module>
+    </modules>
 
 </project>
 ----
