@@ -23,10 +23,6 @@
     <asciidoctorj.diagram.version>2.2.1</asciidoctorj.diagram.version>
     <download.maven.plugin.version>1.6.7</download.maven.plugin.version>
     <asciidoctorj.version>2.5.2</asciidoctorj.version>
-    <!-- jruby.version 9.2.10.0 führt zu Fehler -->
-    <!-- Execution install-gems of goal de.saumya.mojo:gem-maven-plugin:1.1.8:initialize failed: Java returned: 1 -->
-    <!-- ERROR:  While executing gem ... (OptionParser::InvalidOption) invalid option: -no-rdoc-->
-    <!-- waiting for release of gem-maven-plugin 2.0.0 -->
     <jruby.version>9.3.2.0</jruby.version>
     <!-- revealjs.version 4.0.0 bricht die korrekte Anzeige meiner Templates -->
     <revealjs.version>3.9.2</revealjs.version>
