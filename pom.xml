@@ -20,7 +20,7 @@
     <!-- Maven Plugin Versions -->
     <asciidoctor.maven.plugin.version>2.2.3</asciidoctor.maven.plugin.version>
     <asciidoctorj.pdf.version>2.3.6</asciidoctorj.pdf.version>
-    <asciidoctorj.diagram.version>2.2.7</asciidoctorj.diagram.version>
+    <asciidoctorj.diagram.version>2.2.8</asciidoctorj.diagram.version>
     <download.maven.plugin.version>1.6.8</download.maven.plugin.version>
     <asciidoctorj.version>2.5.7</asciidoctorj.version>
     <jruby.version>9.4.2.0</jruby.version>
