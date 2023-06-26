@@ -18,11 +18,11 @@
     <maven.compiler.target>1.8</maven.compiler.target>
 
     <!-- Maven Plugin Versions -->
-    <asciidoctor.maven.plugin.version>2.2.3</asciidoctor.maven.plugin.version>
+    <asciidoctor.maven.plugin.version>2.2.4</asciidoctor.maven.plugin.version>
     <asciidoctorj.pdf.version>2.3.7</asciidoctorj.pdf.version>
-    <asciidoctorj.diagram.version>2.2.7</asciidoctorj.diagram.version>
-    <download.maven.plugin.version>1.6.8</download.maven.plugin.version>
-    <asciidoctorj.version>2.5.7</asciidoctorj.version>
+    <asciidoctorj.diagram.version>2.2.9</asciidoctorj.diagram.version>
+    <download.maven.plugin.version>1.7.0</download.maven.plugin.version>
+    <asciidoctorj.version>2.5.10</asciidoctorj.version>
     <jruby.version>9.4.2.0</jruby.version>
     <!-- revealjs.version 4.0.0 bricht die korrekte Anzeige meiner Templates -->
     <revealjs.version>3.9.2</revealjs.version>
