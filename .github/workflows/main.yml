@@ -1,0 +1,90 @@
+name: Build, Test and Merge optional
+on:
+  push:
+  pull_request:
+  pull_request_target:
+
+permissions:
+  checks: write
+  contents: write
+  pull-requests: write
+
+jobs:
+  print-context:
+    name: Print Context
+    runs-on: ubuntu-latest
+    steps:
+      - name: Print github.actor
+        run: echo "github.actor ${{ github.actor }}."
+      - name: github.event.pull_request.user.login
+        run: echo "github.event.pull_request.user.login is ${{ github.event.pull_request.user.login }}."
+      - name: steps.dependabot-metadata.outputs.dependency-names
+        run: echo "steps.dependabot-metadata.outputs.dependency-names is ${{ steps.dependabot-metadata.outputs.dependency-names }}."
+      - name: steps.dependabot-metadata.outputs.update-type
+        run: echo "steps.dependabot-metadata.outputs.update-type is ${{ steps.dependabot-metadata.outputs.update-type }}."
+
+
+  test:
+    name: Build and Test with Maven
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout Sources
+        uses: actions/checkout@v3
+      - name: Set up JDK 21
+        uses: actions/setup-java@v4.2.1
+        with:
+          java-version: '21'
+          distribution: 'temurin'
+          cache: maven
+      - name: Test with Maven
+        run: mvn -B test --file pom.xml
+      - name: Upload Test Results as Artefact
+        uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: test-results
+          path: '**/target/surefire-reports/*.xml'
+      - name: Publish Test Results
+        uses: dorny/test-reporter@v1
+        if: always()
+        with:
+          artifact: test-results
+          name: Maven Test Results
+          path: '**/*.xml'
+          reporter: java-junit
+          fail-on-error: true
+
+  dependabot_auto_approve:
+    name: Dependabot auto-approve
+    runs-on: ubuntu-latest
+    # Checking the author will prevent your Action run failing on non-Dependabot PRs
+    if: github.event.pull_request.user.login == 'dependabot[bot]'
+    steps:
+      - name: Dependabot metadata
+        id: dependabot-metadata
+        uses: dependabot/fetch-metadata@v2
+      - uses: actions/checkout@v4
+      - name: Approve a PR if not already approved
+        run: |
+          gh pr checkout "$PR_URL" # sets the upstream metadata for `gh pr status`
+          if [ "$(gh pr status --json reviewDecision -q .currentBranch.reviewDecision)" != "APPROVED" ];
+          then gh pr review --approve "$PR_URL"
+          else echo "PR already approved, skipping additional approvals to minimize emails/notification noise.";
+          fi
+        env:
+          PR_URL: ${{github.event.pull_request.html_url}}
+          GITHUB_TOKEN: ${{secrets.GITHUB_TOKEN}}
+
+  dependabot_auto_merge:
+    name: Dependabot auto-merge
+    runs-on: ubuntu-latest
+    if: github.event.pull_request.user.login == 'dependabot[bot]'
+    steps:
+      - name: Dependabot metadata
+        id: dependabot-metadata
+        uses: dependabot/fetch-metadata@v2
+      - name: Enable auto-merge for Dependabot PRs
+        run: gh pr merge --auto --merge "$PR_URL"
+        env:
+          PR_URL: ${{github.event.pull_request.html_url}}
+          GH_TOKEN: ${{secrets.GITHUB_TOKEN}}
